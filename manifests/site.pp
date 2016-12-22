@@ -1,5 +1,6 @@
 require boxen::environment
 require homebrew
+require brewcask
 require gcc
 
 Exec {
@@ -69,6 +70,7 @@ node default {
   nodejs::version { '0.12': }
 
   # default ruby versions
+  ruby::version { '1.8.7': }
   ruby::version { '1.9.3': }
   ruby::version { '2.0.0': }
   ruby::version { '2.1.8': }
@@ -81,6 +83,13 @@ node default {
       'findutils',
       'gnu-tar'
     ]:
+  }
+
+  package {
+    [
+      'iterm2'
+    ]:
+      provider => 'brewcask'
   }
 
   file { "${boxen::config::srcdir}/our-boxen":
