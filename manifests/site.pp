@@ -81,13 +81,16 @@ node default {
     [
       'ack',
       'findutils',
-      'gnu-tar'
+      'gnu-tar',
+      'bash-completion'
     ]:
   }
 
   package {
     [
-      'iterm2'
+      'iterm2',
+      'transmission',
+      'sublime-text'
     ]:
       provider => 'brewcask'
   }
