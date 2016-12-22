@@ -82,7 +82,9 @@ node default {
       'ack',
       'findutils',
       'gnu-tar',
-      'bash-completion'
+      'bash-completion',
+      'stoken',
+      'corectl'
     ]:
   }
 
@@ -90,7 +92,8 @@ node default {
     [
       'iterm2',
       'transmission',
-      'sublime-text'
+      'sublime-text',
+      'corectl-app'
     ]:
       provider => 'brewcask'
   }
